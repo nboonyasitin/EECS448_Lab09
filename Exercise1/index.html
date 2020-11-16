@@ -4,10 +4,15 @@
     <table>
         <th>100 x 100 Multiplication Table</th>
             <?php
-            for($i = 0; $i < 100; $i++)
+            for($i = 0; $i < 101; $i++)
             {
-                echo "$i";
+                echo'<tr>';
+               for($j = 0; $j < 101; $j++)
+               {
+                    echo'<tf>' .$i*$j.'</td>';
+                echo '/tr>';
             }
+    </table>
             ?>
     </table>
 </html>
