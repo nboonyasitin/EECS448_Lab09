@@ -3,23 +3,27 @@
 <form action="customerBackend.php" method="post">
 
     <h4>Please enter your username, password and shipping preferences.</h4>
-    <h5>Username: </h5> <input type="text" name="username"><br>
-    <h5>Password: </h5> <input type="text" name="password"><br>
+    <h5>Username: </h5> <input type="text" id="username"><br>
+    <h5>Password: </h5> <input type="text" id="password"><br>
     <h5>What would you like to purchase?</h5>
-    <p> Facial Wash is $5.00 each, please enter your quantity:</p> <input type="number" name="quantity"><br>
-    <p> Hair wash is $8.00 each, please enter your quantity:</p> <input type="number" name="quantity"><br>
-    <p> Body wash is $6.00 each, please enter your quantity:</p> <input type="number" name="quantity"><br>
+    <p> Facial Wash is $5.00 each, please enter your quantity:</p> <input type="number" id="facialWashQuantity"><br>
+    <p> Hair wash is $8.00 each, please enter your quantity:</p> <input type="number" id="hairWashQuantity"><br>
+    <p> Body wash is $6.00 each, please enter your quantity:</p> <input type="number" id="bodyWashQuantity"><br>
 
 
     <h5>Shipping Preferences: </h5>
-    <input type="radio" name="Shipping">
+    <input type="radio" id="free">
     <label for="free">Free 7 Day Shipping</label><br>
-    <input type="radio" name="Shipping">
+    <input type="radio" id="overnight">
     <label for="overnight">$50.00 overnight shipping</label><br>
-    <input type="radio" name="Shipping">
+    <input type="radio" id="threeday">
     <label for="threeday">$5.00 three day</label><br>
 
 
     <script type="text/javascript" src="formChecker.js"> </script>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    <input type="submit" onclick="validateForm()">
+    <input type="reset" onclick="resetForm()">
+
 </form>
